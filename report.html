@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Work Report System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+  <h2>📋 Daily Work Report</h2>
+
+  <form id="form" method="post" name="google-sheet">
+
+    <label>Name</label>
+    <input type="text" name="name" required>
+
+    <label>Email</label>
+    <input type="email" name="email" required>
+
+    <label>Date</label>
+    <input type="date" name="date" required>
+
+    <label>Work Update</label>
+    <textarea id="work" name="work" rows="4" placeholder="Type or use voice..." required></textarea>
+
+    <button type="button" class="voice-btn" onclick="startVoice()">🎤 Start Voice</button>
+
+    <button type="submit" name="submit" class="submit-btn">Submit</button>
+
+  </form>
+
+  <div class="status" id="msg"></div>
+</div>
+
+<!-- Link JS -->
+<script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxB_e5vn4a2LWLn5W36pXEixcle18fn7UAPzlchHcmvmWolGNd_nb-gV4Jom7yhAZCdYg/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+
+</body>
+</html>
