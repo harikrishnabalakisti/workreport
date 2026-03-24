@@ -1,6 +1,15 @@
+/* 🌆 Background Image */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #86aaca, #00f2fe);
+
+  background: 
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url("https://enchttps://www.pinterest.com/ideas/white-gif-aesthetic/915871553692/rypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ05x-KG4_9qgXPIib_PpEcVqSDAOYB392zVw&s");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,28 +17,63 @@ body {
   margin: 0;
 }
 
+/* Logo + main title */
+.title-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;  /* center whole row */
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+}
+
+/* Main heading */
+.main-title {
+  margin: 0;
+  font-size: 26px;
+  text-align: center;
+}
+
+/* 🔥 Subheading BELOW h2 */
+.sub-title {
+  text-align: center;
+  margin-top: -20px;
+  font-size: 18px;
+  color: #444;
+}
+/* 📦 Container */
 .container {
-  background: rgb(205, 177, 177);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+
   padding: 30px;
   width: 580px;
   border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
+
 
 h2 {
   text-align: center;
   margin-bottom: 20px;
+  font-family: ui-rounded;
+  font-size: 30px;
 }
 
 label {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 14px;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 input, textarea {
   width: 100%;
-  padding: 10px;
-  margin: 8px 0 15px;
+  padding: 8px;
+  margin: 9px 0 15px;
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 14px;
@@ -39,6 +83,7 @@ textarea {
   resize: none;
 }
 
+/* 🎤 Buttons */
 .voice-btn {
   width: 100%;
   background: #007bff;
@@ -61,8 +106,42 @@ textarea {
   cursor: pointer;
 }
 
+/* ♿ Accessibility */
+input:focus, textarea:focus, button:focus {
+  outline: 3px solid #100f0f;
+  outline-offset: 2px;
+  background-color: #218683;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+::placeholder {
+  color: #555;
+}
+
 .status {
   text-align: center;
   margin-top: 10px;
   font-size: 14px;
+  font-weight: bold;
 }
+
+
+
+  .container {
+    background: #f5f3f3;
+    color: #060000;
+    opacity: 0.7;
+  }
+
+  input, textarea {
+    background: #2a2a2a;
+    color: #fff;
+    border: 1px solid #555;
+  }
