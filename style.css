@@ -1,22 +1,20 @@
 /* 🌆 Background Image */
 body {
   font-family: 'Segoe UI', sans-serif;
-
-  background: 
-    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-    url("https://enchttps://www.pinterest.com/ideas/white-gif-aesthetic/915871553692/rypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ05x-KG4_9qgXPIib_PpEcVqSDAOYB392zVw&s");
-
+  background-color: #ccc;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  
 
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
+  align-items: flex-start;
 
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
 /* Logo + main title */
 .title-box {
   display: flex;
@@ -28,6 +26,9 @@ body {
 .logo {
   width: 70px;
   height: 70px;
+  position: relative;
+  right: 30px;
+  bottom: 20px;
 }
 
 /* Main heading */
@@ -40,16 +41,20 @@ body {
 /* 🔥 Subheading BELOW h2 */
 .sub-title {
   text-align: center;
-  margin-top: -20px;
+  margin-top: -35px;
   font-size: 18px;
   color: #444;
+  position: relative;
+  right: 10px;
+  bottom: 20px;
+  font-family: ui-rounded;
 }
 /* 📦 Container */
 .container {
-  background: rgba(255, 255, 255, 0.95);
+  background: #131212f2;
   backdrop-filter: blur(8px);
 
-  padding: 30px;
+  padding: 33px;
   width: 580px;
   border-radius: 15px;
 
@@ -59,15 +64,19 @@ body {
 
 h2 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   font-family: ui-rounded;
   font-size: 30px;
+  position: relative;
+  right: 10px;
+  bottom: 20px;
 }
 
 label {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 18px;
   font-family: 'Segoe UI', sans-serif;
+  font-weight: bold
 }
 
 input, textarea {
@@ -85,31 +94,34 @@ textarea {
 
 /* 🎤 Buttons */
 .voice-btn {
-  width: 100%;
+  width: 103%;
   background: #007bff;
   color: white;
   padding: 10px;
-  border: none;
-  border-radius: 8px;
+  border-radius: 50px;
   cursor: pointer;
   margin-bottom: 10px;
+  font-size: 20px;
+  font-family: ui-rounded;
 }
 
 .submit-btn {
-  width: 100%;
+  width: 103%;
   background: #28a745;
   color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
+  padding: 10px;
+
+  border-radius: 50px;
   font-size: 16px;
   cursor: pointer;
+  font-size: 20px;
+  font-family: ui-rounded;
 }
 
 /* ♿ Accessibility */
 input:focus, textarea:focus, button:focus {
   outline: 3px solid #100f0f;
-  outline-offset: 2px;
+  outline-offset: 5px;
   background-color: #218683;
 }
 
@@ -135,8 +147,10 @@ button:active {
 
 
   .container {
-    background: #f5f3f3;
+    background: #ffffff;
     color: #060000;
+    border: 2px solid black;
+    border-radius: 20px ;
     opacity: 0.7;
   }
 
